@@ -11,18 +11,17 @@ def facade(x, y_sol, couleur, niveau):
     remarque :
         Facade dessine une facade sans les élèments interieurs
     """
-    t.penup()
-    t.setx(x-70)
-    t.sety(y_sol-30)
-    t.pendown()
-    t.setposition(x+70,y_sol-30)
-    t.setposition(x+70,y_sol+30)
-    t.setposition(x-70,y_sol+30)
-    t.setposition(x-70,y_sol-30)
-    t.penup()
     t.fillcolor(couleur)
     t.begin_fill()
-    t.filling()
+    t.penup()
+    t.setposition(x - 70, y_sol + (niveau + 1) * 60 - 30)
+    t.pendown()
+
+    t.setposition(x + 70, y_sol + (niveau + 1) * 60 - 30)
+    t.setposition(x + 70, y_sol + (niveau + 1) * 60 +30)
+    t.setposition(x - 70, y_sol + (niveau + 1) * 60 + 30)
+    t.setposition(x -70, y_sol + (niveau + 1) * 60 - 30)
+    t.penup()
     t.end_fill()
 
 
