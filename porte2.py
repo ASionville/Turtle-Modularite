@@ -1,5 +1,5 @@
-import  turtle
-
+import turtle
+from rectangle import rectangle
 def porte2(x,y,couleur):
     '''
     Paramètres :
@@ -12,7 +12,18 @@ def porte2(x,y,couleur):
         La partie rectangulaire a une hauteur de 40 pixels
         La partie semi circulaire a un rayon de 15 pixels
     '''
-    pass
+    turtle.fillcolor(couleur)
+    turtle.begin_fill()
+    rectangle(x - 15, y, x + 15, y + 40)
+    turtle.end_fill()
+
+    turtle.setposition(x - 15, y + 40)
+
+    turtle.begin_fill()
+    turtle.setheading(-90)
+    turtle.circle(15, -180)
+    turtle.end_fill()
+
 
 if __name__ == '__main__':
     porte2(0,0,"red")
