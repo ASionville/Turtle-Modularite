@@ -1,20 +1,17 @@
-# Module par sebastien chanthery
+import turtle as t
+from Trait import trait
 
-import turtle
-from trait import trait
-
-# ----- Sol de la rue -----
 def sol(y_sol):
-    '''
-    Paramètres
-        y_sol : ordonnée du sol du la rue
-    Cete fonction dessine un trait horizontale de 3 pixels d'épaisseur
-    '''
-
-    pass
+    """
+    Paramètres :
+        Y_sol : ordonnée du sol de la rue
+    cette fonction dessine un trait horizontale de 3 vpixels d'épaisseur.
+    """
+    t.pensize(3)
+    trait(-90,y_sol,90,y_sol)
 
 
 if __name__ == '__main__':
     sol(0)
-    # On ferme la fenêtre s'il y a un clique gauche
-    turtle.exitonclick()
+    # On ferme la fenêtre si il y a in clique gauche
+    t.exitonclick()
