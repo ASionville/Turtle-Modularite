@@ -1,5 +1,8 @@
 import turtle
+<<<<<<< HEAD
 from trait import trait
+=======
+>>>>>>> master
 
 def toit1(x, y_sol, niveau):
     '''
@@ -10,6 +13,7 @@ def toit1(x, y_sol, niveau):
     Cette fonction dessine un toit triangulaire noir de base 160 pixels
     et de hauteur centrale 40 pixels
     '''
+<<<<<<< HEAD
     turtle.penup()
     bas_g = (x, (y_sol + 1) * 60)
     bas_d = (x + 160, (y_sol + 1) * 60)
@@ -18,6 +22,10 @@ def toit1(x, y_sol, niveau):
     trait(bas_g[0], bas_g[1], bas_d[0], bas_d[1])
     trait(bas_g[0], bas_g[1], haut[0], haut[1])
     trait(haut[0], haut[1], bas_d[0], bas_d[1])
+=======
+    pass
+
+>>>>>>> master
 
 if __name__ == '__main__':
     toit1(0,0,0)
