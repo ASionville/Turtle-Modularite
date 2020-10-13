@@ -30,7 +30,6 @@ def fenetre_balcon(x,y):
     for i in range (0,9):
         trait((T.xcor()+4.2),T.ycor()-25,(T.xcor()+4.2),T.ycor())
     rectangle(x,y,38.4,25)
-    T.setposition(x+15,y)
 
 
     # balcon

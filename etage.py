@@ -27,21 +27,34 @@ def etage(x, y_sol, couleur, niveau):
             lst.append("fenetre_balcon")
         shuffle(lst)
 
-    distance = 12.5
+    distance = 37
+
     for i in range(len(lst)):
         if lst[i] == "fenetre":
+            fenetre((x-70)+(i+1)*x+(i+1)*distance, y_sol + (niveau + 1) * 60 +45)
+        else:
+            fenetre_balcon((x-70)+(i+1)*x+(i+1)*distance, y_sol + (niveau + 1) * 60 +35)
+
+
+
+
+
+
+"""
             if i == 0:
                 print(20)
-                fenetre((x-70)+(i+1)*x+(i+1)*distance, y_sol + (niveau + 1) * 60 +45)
+                fenetre((x-70)+(i+1)*x+(i+1)*distance-15, y_sol + (niveau + 1) * 60 +45)
             else:
                 print(10)
                 fenetre((x-70)+(i+1)*x+(i+1)*distance, y_sol + (niveau + 1) * 60 +45)
         else:
             if i == 0:
-                fenetre_balcon((x-70)+(i+1)*x+(i+1)*distance, y_sol + (niveau + 1) * 60 +35)
+                print(1)
+                fenetre_balcon((x-70)+(i+1)*x+(i+1)*distance-15, y_sol + (niveau + 1) * 60 +35)
             else:
+                print(2)
                 fenetre_balcon((x-70)+(i+1)*x+(i+1)*distance, y_sol + (niveau + 1) * 60 +35)
-    
+""" 
 
 
 
