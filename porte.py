@@ -13,9 +13,9 @@ def porte(x,y,couleur):
     Cette fonction dessine au hasard un des 2 types de porte
     '''
     turtle.penup()
-    choix_toit = randint(1,2)
+    choix_porte = randint(1,2)
 
-    if choix_toit == 1:
+    if choix_porte == 1:
         porte1(x, y, couleur)
     else:
         porte2(x, y, couleur)

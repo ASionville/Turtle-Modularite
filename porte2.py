@@ -1,5 +1,6 @@
 import turtle
-from rectangle import rectangle
+from trait import trait
+
 def porte2(x,y,couleur):
     '''
     Paramètres :
@@ -12,24 +13,35 @@ def porte2(x,y,couleur):
         La partie rectangulaire a une hauteur de 40 pixels
         La partie semi circulaire a un rayon de 15 pixels
     '''
+
+    turtle.penup()
+
     turtle.fillcolor(couleur)
-    turtle.pencolor(couleur)
-    turtle.begin_fill()
-    turtle.speed(1)
-    rectangle(x - 15, y, x + 15, y + 40)
-    turtle.end_fill()
 
-    turtle.setposition(x - (15 + 7.5), y + 40)
+    turtle.setposition(x - 15, y)
 
     turtle.begin_fill()
-    turtle.setheading(-90)
-    turtle.circle(7.5, -180)
+
+    trait(x - 15, y,
+          x + 15, y)
+
+    trait(x + 15, y,
+          x + 15, y + 40)
+    
+    turtle.pendown()
+
+    turtle.setheading(90)
+    turtle.circle(15, 180)
+
+    trait(x - 15, y + 40,
+          x - 15, y)
+
     turtle.end_fill()
-    turtle.pencolor('black')
-    turtle.setheading(0)
+
+    turtle.penup()
 
 
 if __name__ == '__main__':
-    porte2(0,0,"red")
+    porte2(20,0,"red")
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

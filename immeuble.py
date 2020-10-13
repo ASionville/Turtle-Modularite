@@ -17,23 +17,22 @@ def immeuble(x, y_sol):
     '''
     # Nombre d'étage (aléatoire)
 
-    pass
+    nb_etage = randint(0, 4)
 
+    print(nb_etage)
     #Couleurs des éléments (aléatoire)
-
-    pass
+    c_facade = couleur_aleatoire()
+    c_porte = couleur_aleatoire()
 
     # Dessin du RDC
-
-    pass
+    rdc(x, y_sol, c_facade, c_porte)
 
     # Dessin des étages
-
-    pass
+    for niveau in range(nb_etage):
+        etage(x, y_sol, c_facade, niveau + 1)
 
     # Dessin du toit
-
-    pass
+    toit(x, y_sol, nb_etage)
 
 if __name__ == '__main__':
     immeuble(0,0)

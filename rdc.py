@@ -1,5 +1,5 @@
 from facade import facade
-from random import shuffle
+from random import shuffle, randint
 from porte import porte
 from fenetre import fenetre
 import turtle
@@ -17,13 +17,28 @@ def rdc(x, y_sol, c_facade, c_porte):
         Puis les 3 élements : 1 porte et 2 fenêtres disposées au hasard
     '''
     # Dessine la facade
-    pass
+    facade(x, y_sol, c_facade, 0)
 
     # Construit les 3 éléments (1 porte et 2 fenetres)
+    elements = ["porte"]
 
-    pass
+    for _ in range(2):
+        elements.append("fenetre")
+        
+    shuffle(elements)
+
+    for i in range(len(elements)):
+
+        if elements[i] == "porte":
+            porte(x - 70 + (i + 1) * 12.5 + (i * 2 + 1) * 15,
+                  y_sol, c_porte)
+
+        else:
+            fenetre(x - 70 + (i + 1) * 12.5 + (i * 2 + 2) * 15,
+                    y_sol + 15)
+    
 
 if __name__ == '__main__':
-    rdc(0,0,"red","green")
+    rdc(0,0,"red","pink")
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

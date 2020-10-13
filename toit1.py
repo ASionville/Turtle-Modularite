@@ -12,14 +12,23 @@ def toit1(x, y_sol, niveau):
     '''
     turtle.fillcolor(0, 0, 0)
 
-    bas_g = (x, y_sol + (niveau + 1) * 60)
-    bas_d = (x + 160, y_sol + (niveau + 1) * 60)
-    haut = (x + 80, y_sol + (niveau + 1) * 60 + 40)
+    bas_g = (x - 80,
+             y_sol + (niveau + 1) * 60) #Coin en bas à gauche
+    bas_d = (x + 80,
+             y_sol + (niveau + 1) * 60) #Coin en bas à droite
+    haut = (x,
+            y_sol + (niveau + 1) * 60 + 40) #Coin en haut
 
     turtle.begin_fill()
-    trait(bas_g[0], bas_g[1], haut[0], haut[1])
-    trait(haut[0], haut[1], bas_d[0], bas_d[1])
-    trait(bas_d[0], bas_d[1], bas_g[0], bas_g[1])
+    
+    trait(bas_g[0], bas_g[1],
+          haut[0], haut[1])
+
+    trait(haut[0], haut[1],
+          bas_d[0], bas_d[1])
+
+    trait(bas_d[0], bas_d[1],
+          bas_g[0], bas_g[1])
     
     turtle.end_fill()
 

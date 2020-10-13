@@ -1,5 +1,5 @@
 from rectangle import rectangle
-import turtle as T
+import turtle
 
 def fenetre(x,y):
     '''
@@ -10,18 +10,23 @@ def fenetre(x,y):
         dessine une fenetre de 30 pixels sur 30 pixels
 
     '''
-    T.setx(x-15)
-    T.sety(y)
-    T.pencolor("grey")
-    T.pendown()
-    T.fillcolor("white")
-    T.begin_fill()
-    rectangle(x,y,30,30)
-    T.penup()
-    T.end_fill()
 
+    turtle.penup()
+
+    turtle.pencolor("grey")
+
+    turtle.fillcolor("white")
+    turtle.setposition(x - 15, y)
+
+    turtle.begin_fill()
+
+    rectangle(x - 15, y, 30, 30)
+
+    turtle.end_fill()
+    turtle.pencolor("black")
+    turtle.penup()
 
 if __name__ == '__main__':
     fenetre(0,0)
     # On ferme la fenêtre s'il y a un clique gauche
-    T.exitonclick()
+    turtle.exitonclick()

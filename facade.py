@@ -1,5 +1,5 @@
-﻿import turtle as t
-#from rectangle import rectangle
+﻿import turtle
+from rectangle import rectangle
 
 def facade(x, y_sol, couleur, niveau):
     """
@@ -11,22 +11,22 @@ def facade(x, y_sol, couleur, niveau):
     remarque :
         Facade dessine une facade sans les élèments interieurs
     """
-    t.fillcolor(couleur)
-    t.begin_fill()
-    t.penup()
-    t.setposition(x - 70, y_sol + (niveau + 1) * 60 - 30)
-    t.pendown()
 
-    t.setposition(x + 70, y_sol + (niveau + 1) * 60 - 30)
-    t.setposition(x + 70, y_sol + (niveau + 1) * 60 +30)
-    t.setposition(x - 70, y_sol + (niveau + 1) * 60 + 30)
-    t.setposition(x -70, y_sol + (niveau + 1) * 60 - 30)
-    t.penup()
-    t.end_fill()
+    turtle.penup()
 
+    turtle.fillcolor(couleur)
 
+    y = y_sol + niveau * 60 #Ordonnée en bas de l'étage
+
+    turtle.setposition(x, y)
+    turtle.begin_fill()
+
+    rectangle(x, y, 140, 60)
+
+    turtle.end_fill()
+    turtle.penup()
 
 if __name__ == '__main__':
     facade(0,0,"red",0)
     #On ferme la fenêtre si il y a un clique gauche
-    t.exitonclick()
+    turtle.exitonclick()
