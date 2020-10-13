@@ -13,10 +13,10 @@ def rectangle(x,y,w,h):
     turtle.penup() # On lève le crayon
     turtle.setposition(x, y) # On position le crayon
     turtle.pendown() # On baisse le crayon
-    trait(x, y, x + w, y)
-    trait(x + w, y, x + w, y + h)
-    trait(x + w, y + h, x, y + h)
-    trait(x, y + h, x, y)
+    trait(x - (w/2), y, x + (w/2), y)
+    trait(x + (w/2), y, x + (w/2), y + h)
+    trait(x + (w/2), y + h, x - (w/2), y + h)
+    trait(x - (w/2), y + h, x - (w/2), y)
     turtle.penup()
 
 if __name__ == '__main__':
