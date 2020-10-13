@@ -15,8 +15,8 @@ def rectangle(x,y,w,h):
     turtle.pendown() # On baisse le crayon
     trait(x, y, x + w, y)
     trait(x + w, y, x + w, y + h)
-    trait(x, y, x, y + h)
-    trait(x, y + h, x + w, y + h)
+    trait(x + w, y + h, x, y + h)
+    trait(x, y + h, x, y)
     turtle.penup()
 
 if __name__ == '__main__':
