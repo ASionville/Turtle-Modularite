@@ -19,6 +19,7 @@ def fenetre(x,y):
     rectangle(x,y,30,30)
     T.penup()
     T.end_fill()
+    T.setposition(x+15,y)
 
 
 if __name__ == '__main__':
