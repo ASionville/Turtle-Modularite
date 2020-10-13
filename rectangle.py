@@ -1,4 +1,5 @@
 import turtle
+from trait import trait
 
 def rectangle(x,y,w,h):
     '''
@@ -9,9 +10,14 @@ def rectangle(x,y,w,h):
     Cette fonction dessine un rectangle Le point de coordonnées (x,y) est
     sur le côté en bas au milieu
     '''
-
-    pass
-
+    turtle.penup() # On lève le crayon
+    turtle.setposition(x, y) # On position le crayon
+    turtle.pendown() # On baisse le crayon
+    trait(x - (w/2), y, x + (w/2), y)
+    trait(x + (w/2), y, x + (w/2), y + h)
+    trait(x + (w/2), y + h, x - (w/2), y + h)
+    trait(x - (w/2), y + h, x - (w/2), y)
+    turtle.penup()
 
 if __name__ == '__main__':
     rectangle(0,0,150,100)
