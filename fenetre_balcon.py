@@ -13,21 +13,21 @@ def fenetre_balcon(x,y):
     '''
 
     turtle.penup()
-
+    # On dessine le cadre en gris pour plus de contraste avec le balcon
     turtle.pencolor("grey")
-    
+
     turtle.fillcolor("white")
     turtle.setposition(x - 15, y)
+
     turtle.begin_fill()
 
-    rectangle(x - 15, y,30,50)
+    # La porte-fenêtre est un rectangle de 30 par 50
+    rectangle(x - 15, y, 30, 50)
 
     turtle.end_fill()
     turtle.penup()
 
-
-    #balcon
-
+    # On dessine le balcon en noir pour plus de contraste avec le balcon
     turtle.pencolor("black")
     turtle.left(90)
 
@@ -37,6 +37,7 @@ def fenetre_balcon(x,y):
     trait(turtle.xcor(), turtle.ycor(),
           turtle.xcor(), (turtle.ycor() + 25))
 
+    # On dessine tous les barreaux
     for i in range (9):
 
         trait((turtle.xcor() + 4.2), turtle.ycor() - 25,

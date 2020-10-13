@@ -12,11 +12,11 @@ def porte1(x,y,couleur):
     '''
     
     turtle.penup()
-
     turtle.fillcolor(couleur)
 
+    # On va à la première position avant de commencer à remplir
+    # pour éviter les bugs
     turtle.setposition(x - 15, y)
-
     turtle.begin_fill()
 
     rectangle(x, y, 30, 50)

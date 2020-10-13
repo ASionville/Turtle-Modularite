@@ -16,6 +16,15 @@ def rectangle(x, y, w, h):
     turtle.pendown() # On baisse le crayon
 
 
+    # On dessine le rectangle comme ceci :
+    #            3
+    #    X----------------X
+    #    |                |
+    #  4 |                |  2
+    #    |                |
+    #    X----------------X
+    #            1
+
     trait(x - (w/2), y,
           x + (w/2), y)
 

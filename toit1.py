@@ -10,7 +10,10 @@ def toit1(x, y_sol, niveau):
     Cette fonction dessine un toit triangulaire noir de base 160 pixels
     et de hauteur centrale 40 pixels
     '''
+
     turtle.fillcolor(0, 0, 0)
+
+    # Le toit 1 est un triangle
 
     bas_g = (x - 80,
              y_sol + (niveau + 1) * 60) #Coin en bas à gauche
@@ -21,6 +24,7 @@ def toit1(x, y_sol, niveau):
 
     turtle.begin_fill()
     
+    # On dessine le triangle
     trait(bas_g[0], bas_g[1],
           haut[0], haut[1])
 

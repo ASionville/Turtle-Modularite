@@ -12,7 +12,7 @@ def fenetre(x,y):
     '''
 
     turtle.penup()
-
+    # On dessine le cadre en gris pour plus de contraste fenetres/balcon
     turtle.pencolor("grey")
 
     turtle.fillcolor("white")
@@ -20,6 +20,7 @@ def fenetre(x,y):
 
     turtle.begin_fill()
 
+    # La fenêtre est un carré de 30 par 30
     rectangle(x - 15, y, 30, 30)
 
     turtle.end_fill()

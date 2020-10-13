@@ -10,6 +10,7 @@ def sol(y_sol):
     turtle.pensize(3)
     turtle.speed(10)
 
+    # On définit le sol comme un trait de 1000 de long
     trait(-500, y_sol, 500, y_sol)
 
     turtle.speed(6)

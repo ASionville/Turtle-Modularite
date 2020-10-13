@@ -13,6 +13,8 @@ def toit(x, y_sol, niveau):
 
     '''
     turtle.penup()
+
+    # Choix du toit (aléatoire)
     choix_toit = randint(1,2)
 
     if choix_toit == 1:

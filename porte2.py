@@ -15,13 +15,14 @@ def porte2(x,y,couleur):
     '''
 
     turtle.penup()
-
     turtle.fillcolor(couleur)
 
+    # On va à la première position avant de commencer à remplir
+    # pour éviter les bugs
     turtle.setposition(x - 15, y)
-
     turtle.begin_fill()
 
+    # On trace les deux premiers traits
     trait(x - 15, y,
           x + 15, y)
 
@@ -30,16 +31,16 @@ def porte2(x,y,couleur):
     
     turtle.pendown()
 
+    # On fait le demi-cercle
     turtle.setheading(90)
     turtle.circle(15, 180)
 
+    # On finit la porte
     trait(x - 15, y + 40,
           x - 15, y)
 
     turtle.end_fill()
-
     turtle.penup()
-
 
 if __name__ == '__main__':
     porte2(20,0,"red")

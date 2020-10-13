@@ -15,11 +15,10 @@ def immeuble(x, y_sol):
     Cette fonction dessine un immeuble Le nombre d'étage est compris aléatoirement entre 0 et 4
     La couleur de la façade et la couleur de la porte sont tirées au hasard
     '''
-    # Nombre d'étage (aléatoire)
 
+    # Nombre d'étages (aléatoire)
     nb_etage = randint(0, 4)
 
-    print(nb_etage)
     #Couleurs des éléments (aléatoire)
     c_facade = couleur_aleatoire()
     c_porte = couleur_aleatoire()

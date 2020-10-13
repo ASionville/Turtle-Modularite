@@ -13,14 +13,15 @@ def facade(x, y_sol, couleur, niveau):
     """
 
     turtle.penup()
-
     turtle.fillcolor(couleur)
 
-    y = y_sol + niveau * 60 #Ordonnée en bas de l'étage
+    # La hauteur dépend du niveau de l'étage
+    y = y_sol + niveau * 60
 
     turtle.setposition(x, y)
     turtle.begin_fill()
 
+    # La facade est un rectangle de 140 par 60
     rectangle(x, y, 140, 60)
 
     turtle.end_fill()

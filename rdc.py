@@ -16,17 +16,21 @@ def rdc(x, y_sol, c_facade, c_porte):
         D'abord la façade
         Puis les 3 élements : 1 porte et 2 fenêtres disposées au hasard
     '''
-    # Dessine la facade
+
+    # On dessine la facade sans les elements dedans
     facade(x, y_sol, c_facade, 0)
 
-    # Construit les 3 éléments (1 porte et 2 fenetres)
+    
     elements = ["porte"]
+
+    # On choisit aléatoirement une fenêtre seule ou un balcon avec
 
     for _ in range(2):
         elements.append("fenetre")
         
     shuffle(elements)
 
+    # On dessine chaque élement
     for i in range(len(elements)):
 
         if elements[i] == "porte":
