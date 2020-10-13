@@ -15,10 +15,11 @@ def porte2(x,y,couleur):
     turtle.fillcolor(couleur)
     turtle.pencolor(couleur)
     turtle.begin_fill()
+    turtle.speed(1)
     rectangle(x - 15, y, x + 15, y + 40)
     turtle.end_fill()
 
-    turtle.setposition(x - 15, y + 40)
+    turtle.setposition(x - (15 + 7.5), y + 40)
 
     turtle.begin_fill()
     turtle.setheading(-90)
