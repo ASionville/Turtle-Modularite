@@ -19,14 +19,22 @@ def etage(x, y_sol, couleur, niveau):
     # dessin des 3 Eléments
     lst = []
     facade(0, 0, couleur, 1)
-    for i in range(0,3):
+    for _ in range(0,3):
         nbr = randint(0,2)
         if nbr == 0:
             lst.append(fenetre(x,y_sol + (niveau + 1) * 60))
         else:
             lst.append(fenetre_balcon(x,y_sol + (niveau + 1) * 60))
         shuffle(lst)
-    print(lst[0,1,2])
+
+    distance = (140-90)/4
+    for i in range(len(lst)):
+        if lst[i] == fenetre(x,y_sol + (niveau + 1) * 60):
+            fenetre((x-70)+(i+1)*x+(i+1)*(distance), y_sol + (niveau + 1) * 60 +15)
+        else:
+            fenetre_balcon((x-70)+(i+1)*x+(i+1)*(distance), y_sol + (niveau + 1) * 60 +5)
+
+    
 
 
 
