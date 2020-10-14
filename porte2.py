@@ -1,7 +1,7 @@
 import turtle
 from trait import trait
 
-def porte2(x,y,couleur):
+def porte2(x, y, couleur):
     '''
     Paramètres :
         x est l'abcisse du centre de la porte
@@ -43,6 +43,6 @@ def porte2(x,y,couleur):
     turtle.penup()
 
 if __name__ == '__main__':
-    porte2(20,0,"red")
+    porte2(20, 0, "red")
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

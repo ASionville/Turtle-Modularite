@@ -12,7 +12,7 @@ def rectangle(x, y, w, h):
     '''
     
     turtle.penup() # On lève le crayon
-    turtle.setposition(x, y) # On position le crayon
+    turtle.setposition(x, y) # On positionne le crayon
     turtle.pendown() # On baisse le crayon
 
 

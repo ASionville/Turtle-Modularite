@@ -7,6 +7,7 @@ def sol(y_sol):
         Y_sol : ordonnée du sol de la rue
     cette fonction dessine un trait horizontale de 3 pixels d'épaisseur.
     """
+    
     turtle.pensize(3)
     turtle.speed(10)
 

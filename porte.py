@@ -4,7 +4,7 @@ from rectangle import rectangle
 from random import randint
 import turtle
 
-def porte(x,y,couleur):
+def porte(x, y, couleur):
     '''
     Paramètres :
         x est l'abcisse du centre de la porte
@@ -16,7 +16,7 @@ def porte(x,y,couleur):
     turtle.penup()
 
     # Choix de la porte (aléatoire)
-    choix_porte = randint(1,2)
+    choix_porte = randint(1, 2)
 
     if choix_porte == 1:
         porte1(x, y, couleur)
@@ -26,6 +26,6 @@ def porte(x,y,couleur):
     turtle.penup()
 
 if __name__ == '__main__':
-    porte(0,0,"red")
+    porte(0, 0, "red")
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

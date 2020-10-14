@@ -34,6 +34,6 @@ def immeuble(x, y_sol):
     toit(x, y_sol, nb_etage)
 
 if __name__ == '__main__':
-    immeuble(0,0)
+    immeuble(0, 0)
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

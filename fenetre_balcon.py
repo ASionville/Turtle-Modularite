@@ -2,7 +2,7 @@ import turtle
 from rectangle import rectangle
 from trait import trait
 
-def fenetre_balcon(x,y):
+def fenetre_balcon(x, y):
     '''
     Paramètres :
         x est l'abcisse du centre de la porte-fenetre-balcon
@@ -48,6 +48,6 @@ def fenetre_balcon(x,y):
 
 
 if __name__ == '__main__':
-    fenetre_balcon(0,0)
+    fenetre_balcon(0, 0)
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

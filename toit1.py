@@ -37,6 +37,6 @@ def toit1(x, y_sol, niveau):
     turtle.end_fill()
 
 if __name__ == '__main__':
-    toit1(0,0,0)
+    toit1(0, 0, 0)
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

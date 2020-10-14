@@ -15,7 +15,7 @@ def toit(x, y_sol, niveau):
     turtle.penup()
 
     # Choix du toit (aléatoire)
-    choix_toit = randint(1,2)
+    choix_toit = randint(1, 2)
 
     if choix_toit == 1:
         toit1(x, y_sol, niveau)
@@ -25,6 +25,6 @@ def toit(x, y_sol, niveau):
     turtle.penup()
 
 if __name__ == '__main__':
-    toit(0,0,0)
+    toit(0, 0, 0)
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

@@ -2,7 +2,12 @@ import turtle
 
 def trait(x1, y1, x2, y2):
     '''
+    Paramètres :
+        x1, y1 : coordonnées du premier point
+        x2, y2 : coordonnées du deuxième point
+    Cette fonction trace un trait entre les deux points
     '''
+
     turtle.penup() # On lève le crayon
 
     turtle.setposition(x1, y1) # On position le crayon

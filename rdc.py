@@ -21,12 +21,7 @@ def rdc(x, y_sol, c_facade, c_porte):
     facade(x, y_sol, c_facade, 0)
 
     
-    elements = ["porte"]
-
-    # On choisit aléatoirement une fenêtre seule ou un balcon avec
-
-    for _ in range(2):
-        elements.append("fenetre")
+    elements = ["porte", "fenetre", "fenetre"]
         
     shuffle(elements)
 
@@ -43,6 +38,6 @@ def rdc(x, y_sol, c_facade, c_porte):
     
 
 if __name__ == '__main__':
-    rdc(0,0,"red","pink")
+    rdc(0, 0, "red", "pink")
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

@@ -2,7 +2,7 @@ from facade import facade
 from random import shuffle,randint
 from fenetre import fenetre
 from fenetre_balcon import fenetre_balcon
-import turtle as t
+import turtle
 
 def etage(x, y_sol, couleur, niveau):
     '''
@@ -39,6 +39,6 @@ def etage(x, y_sol, couleur, niveau):
                     y + 15)
 
 if __name__ == '__main__':
-    etage(0,0,"red",1)
+    etage(0, 0, "red", 1)
     # On ferme la fenêtre s'il y a un clique gauche
-    t.exitonclick()
+    turtle.exitonclick()
